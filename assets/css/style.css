@@ -288,7 +288,51 @@ a:hover {
 	background-color: gold;
 }
  
+/* RESPONSIVE */
 
+@media screen and (max-width: 727px) {
+	.header {
+		border-bottom: 5px solid #cccccc;
+		margin-bottom: 60px;
+		max-width: 727px;
+
+ 	}
+
+ 	li.nav, h1, a {
+ 		text-align: center;
+ 		display: block;
+ 		margin: 0 auto;
+ 	}
+
+ 	nav { 
+ 		text-align: center;
+ 		display: inline-block;
+ 	}
+
+ 	ul {
+ 		margin: 0 auto;
+ 	}
+
+
+ 	.content {
+ 		text-align: center;
+ 		display: block;
+ 		margin: 0 auto;
+ 		width: 100%;
+ 	}
+
+ 	.connect {
+ 		text-align: center;
+ 		display: block;
+ 		margin: 0 auto;
+ 		width: 100%;
+
+ 	}
+
+
+
+
+}
 
 
 
