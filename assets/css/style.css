@@ -105,6 +105,10 @@ body {
     display: inline-block;
 }
 
+.main {
+	height: 100%;
+}
+
 /* Individual Elements */
 
 div.content p {
@@ -169,7 +173,7 @@ h3 a {
 
 /**/
 
-html, body {height: 100%;}
+/*html, body {height: 100%;}*/
 
 #wrap {min-height: 100%;}
 
