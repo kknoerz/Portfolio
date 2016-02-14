@@ -1,6 +1,4 @@
-* {
-	margin: 0;
-}
+
 /* ABOUT STYLING */
 /* Header styling */
 .header_width{
@@ -81,6 +79,7 @@ body {
 	background-repeat: repeat;
 	background-size: 400px;
 	margin: 0 auto;
+	overflow: auto;
 	/*margin-bottom: 100%;*/	
 }
 
@@ -93,15 +92,14 @@ body {
 	margin-top: 35px;
 	/*margin-bottom: 100%;*/
 	border: solid 1px #cccccc;
+	margin-bottom: 80px;
 }
 
 .connect {
 	background-color: #ffffff;
 	float: right;
-    max-width: 230px;
+    width: 230px;
     margin-top: 35px;
-    padding: 20px;
-    border: solid 1px #cccccc;
     display: inline-block;
 }
 
@@ -112,13 +110,36 @@ body {
 /* Individual Elements */
 
 div.content p {
-	padding: 10px;
+	padding: 20px;
 	line-height: 2;
 	font-weight: 600;
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-	font-size: 12pt;
+	font-size: 10pt;
 	font-color: #777777;
 }
+
+form {
+	padding: 20px;
+}
+
+input[type=text] {
+	width: 100%;
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input[type=email] {
+	width: 100%;
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input[type=message] {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 120px;
+	}
 
 h2 {
 	font-family: "Times New Roman", Georgia, Serif;
@@ -140,13 +161,16 @@ h3 {
 	font-weight: bold;
 	font-size: 20px;
 	color: #4aaaa5;
-	border-bottom: solid 1px #cccccc;
-	padding-bottom: 15px;
-	text-align: left;
+	padding: 20px;
+	text-align: center;
 }
 
 h3 a {
 	padding: 10px;
+}
+
+div.links {
+	margin: 20px;
 }
 
 /* Image sizes */
@@ -154,13 +178,14 @@ h3 a {
 .logo {
 	width: 60px;
 	display: inline-block;
-	padding-top: 15px;
-
-
 }
 
-#profile {
-	width: 22%;
+.logo_wrap {
+	margin: 20px 20px 30px 20px;
+}
+
+img#profile {
+	width: 140px;
 	margin: 20px 20px 15px 20px;
 	float: left;
 }
@@ -180,10 +205,12 @@ h3 a {
 #main {overflow:auto;
 	padding-bottom: 40px;}  /* must be same height as the footer */
 
-#footer {position: relative;
+#footer {
+	position: fixed;
 	margin-top: -40px; /* negative value of footer height */
 	height: 40px;
-	clear:both;} 
+	clear:both;
+	} 
 
 
 
@@ -191,12 +218,12 @@ h3 a {
 
 footer {
 	background-color: #777777;
+	margin-top: -40px;
 	height: 40px;
 	width: 100%;
-	display: block;
 	border-top: solid 6px #4aaaa5;
 	clear: both;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 }
 
@@ -284,55 +311,231 @@ div.image {
 	background-color: gold;
 }
 
-a:hover {
+li.nav_item:hover, .logo:hover {
 	background-color: gold;
 }
  
-/* RESPONSIVE */
+/*********** RESPONSIVE *************/
+				/* 980 */
 
-@media screen and (max-width: 727px) {
+@media screen and (max-width: 980px) {
 	.header {
-		border-bottom: 5px solid #cccccc;
-		margin-bottom: 60px;
-		max-width: 727px;
+		border-bottom: 2px solid #cccccc;
+		/*margin-bottom: 60px;*/		
+
+ 	}
+ 	.header_width {
+ 		width: 728px;
 
  	}
 
- 	li.nav, h1, a {
- 		text-align: center;
- 		display: block;
- 		margin: 0 auto;
- 	}
 
  	nav { 
- 		text-align: center;
+ 		/*text-align: center;*/
  		display: inline-block;
+ 		/*width: 100%;*/
+ 		float: right;
  	}
 
  	ul {
  		margin: 0 auto;
  	}
 
+ 	.main {
+ 		width: 728px;
+ 		margin: 0 auto;
+ 		margin-top: 40px;
 
+ 	}
+ 	
  	.content {
- 		text-align: center;
  		display: block;
  		margin: 0 auto;
- 		width: 100%;
+ 		width: 430px;
+ 		margin-bottom: 80px;
  	}
+
+
 
  	.connect {
  		text-align: center;
- 		display: block;
  		margin: 0 auto;
- 		width: 100%;
+ 		width: 253px;
 
  	}
 
+ 	/* PORTFOLIO */
 
+ 	img {
+ 		width: 390px;
+ 	}
+
+ 	img#profile {
+ 		width: 390px;
+ 	}
+
+ 	h1.text {
+    top: 122px;
+    width: 370px;
+
+ 	}
+
+ 	div.image {
+    width: 390px;
+    margin: 20px;
+	
+	}
+
+	.image h1.text {
+    top: 130px;
+    width: 370px;
+	}
 
 
 }
+ /******** @MEDIA 768  ********/
+
+ 
+
+ @media screen and (max-width: 768px) {
+ 	
+ 	
+ 	
+ 	.main, .background {
+ 		width: 768px;
+ 		clear: both;
+ 	}
+ 	
+ 	.header_width {
+    width: 768px;
+	
+	}
+
+	h1 {
+	margin-left: 20px;
+	}
+
+	.content {
+	width: 728px;
+	display: block;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 0px;
+
+	}
+
+	.image h1.text {
+    top: 94px;
+    width: 304px;
+    margin-left: 0px;
+	}
+
+	img {
+		width: 324px;
+	}
+
+	div.image {
+    width: 324px;
+    margin: 20px;
+	}
+
+	img#profile {
+ 	width: 324px;
+ 	}
+
+	.connect {
+    width: 728px;
+    margin: 0 auto;
+    margin-right: 18px;
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    clear: both;
+	}
+
+	h3 {
+		text-align: left;
+	}
+
+}
+
+/***************** @media 640 **********************/
+
+ @media screen and (max-width: 640px) {
+ 	
+ 	
+ 	
+ 	.main, .background {
+ 		width: 640px;
+ 		clear: both;
+ 	}
+ 	
+ 	.header_width {
+    width: 100%;
+	
+	}
+
+	h1 {
+		width: 100%;
+		text-align: center;
+		margin-left: 0px;
+		margin-top: 0px;
+	}
+
+	nav {
+		width: 100%;
+		margin-top: 0px;
+	}
+
+	li.nav_item {
+    width: 30%;
+    text-align: center;
+    padding: 0px 0px 10px 0px;
+	}
+
+	.content {
+	width: 600px;
+	display: block;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 0px;
+
+	}
+
+	.connect {
+    width: 600px;
+    margin: 0 auto;
+    margin-right: 18px;
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    clear: both;
+	}
+
+	img {
+    width: 560px;
+	}
+
+	.image h1.text {
+    top: 188px;
+    width: 540px;
+    margin-left: 0px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
